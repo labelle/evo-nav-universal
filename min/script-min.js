@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".navbutton").on("click",function(){$("ul.nav-list").toggleClass("nav-open"),$(".navbutton").toggleClass("nav-open")}),$(document).keyup(function(n){27===n.keyCode&&$(".navbutton.nav-open").click()})});
