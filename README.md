@@ -9,6 +9,7 @@ Universal nav bar built using HTML, CSS and javascript.
 
 ## Summary
 
+
 ## Setup
 
 * Add the reference to the stylesheet and set it's pathway.
@@ -57,67 +58,78 @@ Universal nav bar built using HTML, CSS and javascript.
 
 #### Example html structure
 ````shell        
-<ul class="nav-list">
+<nav class="evo-navigation" data-nav-item-count="7" data-mobile-nav-break-point="768">
+  <div class="contain">
+    <a href="#" class="logo">
+      <img src="logo.svg" alt="">
+    </a>
+    <!-- This is the main ul and needs to have the class "nav-list" -->
+    <ul class="nav-list">
+      <!-- This wraps the nav items that move to and from the overflow nav menu only.  Any fixed nav items needs to be outside thie wrapper -->
+      <span class="nav-item-container">
 
-  <span class="nav-item-container">
-
-    <!-- All main nav items should have the class "evo-nav-item".  Nested nav items should not have that class. -->
-    <li class="evo-nav-item"><a href="#" class="item">Menu 1</a></li>
-    <li class="evo-nav-item"><a href="#" class="item">Menu 2</a></li>
-    <li class="evo-nav-item">
-      <label for="drop-1" class="item toggle">Menu 3</label>
-      <a href="#" class="item drop">Menu 3</a>
-      <input type="checkbox" id="drop-1"/>
-      <ul class="item-drop">
-        <li class="nav-item"><a href="#" class="item">Sub Menu 1</a></li>
-        <li class="nav-item"><a href="#" class="item">Sub Menu 2</a></li>
-        <li class="nav-item"><a href="#" class="item">Sub Menu 3</a></li>
-      </ul>
-    </li>
-    <li class="evo-nav-item">
-      <label for="drop-2" class="item toggle">Menu 4</label>
-      <a href="#" class="item drop">Menu 4</a>
-      <input type="checkbox" id="drop-2"/>
-      <ul class="item-drop">
-        <li class="nav-item"><a href="#" class="item">Sub Menu 1</a></li>
-        <li class="nav-item"><a href="#" class="item">Sub Menu 2</a></li>
-        <li class="nav-item"><a href="#" class="item">Sub Menu 3</a></li>
-        <li class="drop-item">
-          <label for="drop-3" class="item toggle">Sub Menu 4</label>
-          <a href="#" class="item drop">Sub Menu 4</a>
-          <input type="checkbox" id="drop-3"/>
+        <!-- All main nav items should have the class "evo-nav-item".  Nested nav items should not have that class. -->
+        <li class="evo-nav-item"><a href="#" class="item">Menu 1</a></li>
+        <li class="evo-nav-item"><a href="#" class="item">Menu 2</a></li>
+        <li class="evo-nav-item">
+          <label for="drop-1" class="item toggle">Menu 3</label>
+          <a href="#" class="item drop">Menu 3</a>
+          <input type="checkbox" id="drop-1"/>
           <ul class="item-drop">
-            <li class="drop-item">
-              <label for="drop-4" class="item toggle">Deep Menu 1</label>
-              <a href="#" class="item drop">Deep Menu 1</a>
-              <input type="checkbox" id="drop-4"/>
-              <ul class="item-drop">
-                <li class="nav-item"><a href="#" class="item">Sub Deep 1</a></li>
-                <li class="nav-item"><a href="#" class="item">Sub Deep 2</a></li>
-                <li class="nav-item"><a href="#" class="item">Sub Deep 3</a></li>
-                <li class="nav-item"><a href="#" class="item">Sub Deep 4</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a href="#">Deep Menu 2</a></li>
+            <li class="nav-item"><a href="#" class="item">Sub Menu 1</a></li>
+            <li class="nav-item"><a href="#" class="item">Sub Menu 2</a></li>
+            <li class="nav-item"><a href="#" class="item">Sub Menu 3</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a href="#" class="item">Sub Menu 5</a></li>
-      </ul>
-    </li>
-    <li class="evo-nav-item"><a href="#" class="item">Menu 5</a></li>
-    <li class="evo-nav-item"><a href="#" class="item">Menu 6</a></li>
-    <li class="evo-nav-item"><a href="#" class="item">Menu 7</a></li>
-    <li class="evo-nav-item"><a href="#" class="item">Menu 8</a></li>
-    <li class="evo-nav-item"><a href="#" class="item">Menu 9</a></li>
-  </span><!-- End "nav-item-container" -->
-  
-  <!-- This is where the overflow nav items go -->
-  <li class="evo-nav-overflow">
-    <a href="#">More</a>
-    <ul class="overflow-list"></ul>
-  </li> 
+        <li class="evo-nav-item">
+          <label for="drop-2" class="item toggle">Menu 4</label>
+          <a href="#" class="item drop">Menu 4</a>
+          <input type="checkbox" id="drop-2"/>
+          <ul class="item-drop">
+            <li class="nav-item"><a href="#" class="item">Sub Menu 1</a></li>
+            <li class="nav-item"><a href="#" class="item">Sub Menu 2</a></li>
+            <li class="nav-item"><a href="#" class="item">Sub Menu 3</a></li>
+            <li class="drop-item">
+              <label for="drop-3" class="item toggle">Sub Menu 4</label>
+              <a href="#" class="item drop">Sub Menu 4</a>
+              <input type="checkbox" id="drop-3"/>
+              <ul class="item-drop">
+                <li class="drop-item">
+                  <label for="drop-4" class="item toggle">Deep Menu 1</label>
+                  <a href="#" class="item drop">Deep Menu 1</a>
+                  <input type="checkbox" id="drop-4"/>
+                  <ul class="item-drop">
+                    <li class="nav-item"><a href="#" class="item">Sub Deep 1</a></li>
+                    <li class="nav-item"><a href="#" class="item">Sub Deep 2</a></li>
+                    <li class="nav-item"><a href="#" class="item">Sub Deep 3</a></li>
+                    <li class="nav-item"><a href="#" class="item">Sub Deep 4</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a href="#">Deep Menu 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#" class="item">Sub Menu 5</a></li>
+          </ul>
+        </li>
+        <li class="evo-nav-item"><a href="#" class="item">Menu 5</a></li>
+        <li class="evo-nav-item"><a href="#" class="item">Menu 6</a></li>
+        <li class="evo-nav-item"><a href="#" class="item">Menu 7</a></li>
+        <li class="evo-nav-item"><a href="#" class="item">Menu 8</a></li>
+        <li class="evo-nav-item"><a href="#" class="item">Menu 9</a></li>
+      </span><!-- End "nav-item-container" -->
 
-  <li class="nav-item nav-button"><a href="#" class="item">Contact Us</a></li>
-</ul>
+      <!-- This is where the overflow nav items go -->
+      <li class="evo-nav-overflow">
+        <a href="#">More</a>
+        <ul class="overflow-list"></ul>
+      </li> 
+
+      <li class="nav-item nav-button"><a href="#" class="item">Contact Us</a></li>
+    </ul>
+    <div class="navbutton">
+      <span class="bars"></span>
+    </div>
+  </div>
+</nav>
 ````
 ## Structure
