@@ -9,9 +9,11 @@ $(document).ready(function(){
   var width_total = $('.evo-navigation').width();
   var width_left = $('.logo').width();
   var width_right = $('.nav-list').width();
+  // This break point is important.  
+  var mobile_nav_break_point = $('.evo-navigation').attr('data-mobile-nav-break-point');
 
   // Checking if screen size is below mobile nav break point.  768 is set in the style sheet as the max-media breakpoint. 
-  if (width_total <= 768 ) {
+  if (width_total <= mobile_nav_break_point ) {
     // If the screen size is below mobile nav break point then we do nothing to the nav items other than hide the overflow nav.
     $('.evo-nav-overflow').addClass('hidden');
 
@@ -45,7 +47,7 @@ $(document).ready(function(){
     var width_right = $('.nav-list').width(); // The right side, this includes the nav items
     var visible_nav_items = document.getElementsByClassName("showing"); // Returns a count of all visible nav items.  We will need this if the window size increases.
 
-    if (width_total <= 768 ) {
+    if (width_total <= mobile_nav_break_point ) {
       // During a window resize, if the screen size has gone down to mobile size we will hide the overflow div.
       // This empties out the overflow nav and puts everything back into the mobile side nav.
       removeAllOverflowItems();
@@ -53,18 +55,18 @@ $(document).ready(function(){
 
     // If at any time more items want to show, we will remove them.
     // This was occuring on a very fast window resize.
-    if (visible_nav_items.length > navitemcount && width_total > 768) {
+    if (visible_nav_items.length > navitemcount && width_total > mobile_nav_break_point) {
       $('.showing').last().prependTo('.overflow-list').removeClass('showing').addClass('overflow');
     }
 
     // If the width goes below the width that the mobile menu appears it will continue to run the append elements function.
     // We only need this to work when the upper nav is showing.  When the side nav takes over then we can turn this off.
-    if (width_left + width_right > (width_total - 100) && width_total > 768) {
+    if (width_left + width_right > (width_total - 100) && width_total > mobile_nav_break_point) {
       $('.showing').last().prependTo('.overflow-list').removeClass('showing').addClass('overflow');
     }
 
     // Need it to run as soon as window size moves beyond mobile nav break point, but also need it to not continue running.
-    if (width_total > 768) {
+    if (width_total > mobile_nav_break_point) {
       $('.evo-nav-overflow').removeClass('hidden');
       overflowcontrol(width_total, width_left, width_right);
     }

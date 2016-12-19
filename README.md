@@ -25,6 +25,11 @@ Universal nav bar built using HTML, CSS and javascript.
 <nav class="evo-navigation" data-nav-item-count="7">
 ````
 
+* We also need to know where the break point is set for the mobile nav.  In the style sheet it is set at 768 pixels.  If that changes in the stylesheet the data attribute "data-mobile-nav-break-point" on the "evo-navigation" element needs to be changed to match.  Changing it in this one places takes care of everything.
+````shell
+<nav class="evo-navigation" data-nav-item-count="7" data-mobile-nav-break-point="768">
+````
+
 * The unordered list that the items are placed in needs to have the class "nav-list"
 ````shell
 <ul class="nav-list"
