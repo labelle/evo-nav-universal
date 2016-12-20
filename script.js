@@ -1,8 +1,13 @@
 $(document).ready(function(){
   //mobile nav
-  $('.navbutton').on('click', function() {
-      $('ul.nav-list').toggleClass('nav-open');
-      $('.navbutton').toggleClass('nav-open');
+  $('.navbutton.menu-offcanvas').on('click', function() {
+      $('ul.nav-list').toggleClass('nav-open-canvas');
+      $('.navbutton').toggleClass('nav-open-canvas');
+  });
+
+  $('.navbutton.menu-modal').on('click', function() {
+      $('ul.nav-list').toggleClass('nav-open-modal');
+      $('.navbutton').toggleClass('nav-open-modal');
   });
 
   //closes mobile nav on escape key hit

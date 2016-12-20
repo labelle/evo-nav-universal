@@ -9,25 +9,19 @@
 	],
 "creatorBuild": "25479",
 "files": {
-	"\/index.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/index.html",
-		"oF": 0
-		},
-	"\/jquery.okayNav.js": {
+	"\/evo-nav.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/min\/jquery.okayNav-min.js",
+		"oAP": "\/min\/evo-nav-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/LICENSE": {
+	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/LICENSE",
+		"oAP": "\/index.html",
 		"oF": 0
 		},
 	"\/logo.svg": {
@@ -49,26 +43,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/okayNav-base.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/okayNav-base-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/okayNav-theme.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/okayNav-theme-min.css",
-		"oF": 0,
-		"oS": 0
-		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 1,
@@ -89,7 +63,7 @@
 		},
 	"\/script.js": {
 		"ft": 64,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/min\/script-min.js",
 		"oF": 0,

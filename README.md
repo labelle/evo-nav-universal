@@ -12,6 +12,8 @@ Universal nav bar built using HTML, CSS and javascript.
 
 ## Setup
 
+#### nav html setup
+
 * Add the reference to the stylesheet and set it's pathway.
 
 * Add the reference to the javascript evo-nav.js file and set it's pathway.
@@ -122,7 +124,7 @@ Universal nav bar built using HTML, CSS and javascript.
       <li class="evo-nav-overflow">
         <a href="#">More</a>
         <ul class="overflow-list"></ul>
-      </li> 
+      </li>
 
       <li class="nav-item nav-button"><a href="#" class="item">Contact Us</a></li>
     </ul>
@@ -132,4 +134,16 @@ Universal nav bar built using HTML, CSS and javascript.
   </div>
 </nav>
 ````
+
+#### Mobile nav options
+* Depending on desired nav functionality add class (menu-modal or menu-offcanvas) to ul.nav-list and .navbutton
+
+#### Example html structure
+````html        
+<ul class="nav-list menu-modal">
+  and
+<div class="navbutton menu-modal">
+```
+
+
 ## Structure
