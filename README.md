@@ -66,7 +66,7 @@ Universal nav bar built using HTML, CSS and javascript.
       <img src="logo.svg" alt="">
     </a>
     <!-- This is the main ul and needs to have the class "nav-list" -->
-    <ul class="nav-list">
+    <ul class="nav-list menu-offcanvas">
       <!-- This wraps the nav items that move to and from the overflow nav menu only.  Any fixed nav items needs to be outside thie wrapper -->
       <span class="nav-item-container">
 
@@ -128,7 +128,7 @@ Universal nav bar built using HTML, CSS and javascript.
 
       <li class="nav-item nav-button"><a href="#" class="item">Contact Us</a></li>
     </ul>
-    <div class="navbutton">
+    <div class="navbutton menu-offcanvas">
       <span class="bars"></span>
     </div>
   </div>
@@ -136,14 +136,51 @@ Universal nav bar built using HTML, CSS and javascript.
 ````
 
 #### Mobile nav options
-* Depending on desired nav functionality add class (menu-modal or menu-offcanvas) to ul.nav-list and .navbutton
+* Depending on desired nav functionality add class "menu-modal" or "menu-offcanvas" to ul.nav-list and .navbutton
 
-#### Example html structure
-````html        
-<ul class="nav-list menu-modal">
-  and
-<div class="navbutton menu-modal">
+* Off canvas nav
+````html
+<nav class="evo-navigation" data-nav-item-count="7" data-mobile-nav-break-point="768">
+  <div class="contain">
+    <a href="#" class="logo">
+      <img src="logo.svg" alt="">
+    </a>
+    <!-- This is the main ul and needs to have the class "nav-list" -->
+    <ul class="nav-list menu-offcanvas">        
+...
+````
+````html
+...
+      <!-- This is where the overflow nav items go -->
+      <li class="evo-nav-overflow">
+        <a href="#">More</a>
+        <ul class="overflow-list"></ul>
+      </li>
+
+      <li class="nav-item nav-button"><a href="#" class="item">Contact Us</a></li>
+    </ul>
+    <div class="navbutton menu-offcanvas">
+      <span class="bars"></span>
+    </div>
+  </div>
+</nav>
 ```
-
-
-## Structure
+* Modal nav
+````html
+<nav class="evo-navigation" data-nav-item-count="7" data-mobile-nav-break-point="768">
+  <div class="contain">
+    <a href="#" class="logo">
+      <img src="logo.svg" alt="">
+    </a>
+    <!-- This is the main ul and needs to have the class "nav-list" -->
+    <ul class="nav-list menu-modal">        
+...
+````
+````html
+...
+    <div class="navbutton menu-modal">
+      <span class="bars"></span>
+    </div>
+  </div>
+</nav>
+```

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  
   // This set of variables is checked on document load.
   var navitemcount = $('.evo-navigation').attr('data-nav-item-count');
   var navitems = document.getElementsByClassName('evo-nav-item');
