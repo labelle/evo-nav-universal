@@ -1,4 +1,4 @@
-# evo-universalNav
+# evo-nav-universal
 
 Universal nav bar built using HTML, CSS and javascript.
 #### Dependency
