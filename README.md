@@ -53,7 +53,7 @@ Universal nav bar built using HTML, CSS and javascript.
 <li class="evo-nav-overflow">
 ````
 
-* Inside the overflow nav nneds to be a ul element with class "overflow-list"
+* Inside the overflow nav needs to be a ul element with class "overflow-list"
 ````shell
 <ul class="overflow-list"></ul>
 ````
